@@ -1,0 +1,519 @@
+/* En este archivo escriban su CSS */
+
+/* Fuente Aplicada de Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+/*estilos generales*/
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
+    &:hover{
+        color: mediumorchid;
+        transform: scale(1.1);
+    }
+}
+
+h2 {
+    font: size 28px;
+}
+
+h2:hover {
+    color: white;
+}
+
+p {
+    margin: 20px 0;
+    padding: 10px;
+    text-align: justify;
+}
+
+h3:hover {
+    color: #fbfbfb;
+}
+
+#animation-img {
+
+    max-width: 100%;
+    /* Ajusta el ancho máximo de la imagen al ancho del contenedor */
+    height: auto;
+    /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block;
+    /* Cambia la visualización a "block" para evitar comportamientos extraños en línea */
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente en el contenedor */
+}
+
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+    width: 100%;
+    background-color: #fbfbfb;
+    box-shadow: 0 3px 10px -5px #5f5f5f;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #5f5f5f;
+    
+}
+
+.header-image {
+    background-image: url(../img/background.jpg);
+    background-size:inherit;
+    background-position: center;
+}
+
+
+/* Estilos para el modo oscuro*/
+.dark-mode {
+    background-color: #111;
+    /* Cambia el color de fondo en modo oscuro */
+    color: #fff;
+    /* Cambia el color del texto en modo oscuro */
+}
+
+/* Estilos específicos para el header en modo oscuro */
+.dark-mode header {
+    background-color: #222;
+    /* Cambia el color de fondo del header en modo oscuro */
+    color: #fff;
+    /* Cambia el color del texto en el header en modo oscuro */
+}
+
+/* Estilos específicos para los sections en modo oscuro */
+
+.dark-mode .intro {
+    background-color: #5f5f5f;
+    color: #fff
+}
+
+.dark-mode .hablemos {
+    background-color: #5f5f5f;
+    color: #fff
+}
+
+.dark-mode .contenido {
+    background-color: #5f5f5f;
+    color: #fff
+}
+
+.dark-mode #herramientas {
+    background-color: #5f5f5f;
+    color:#fff;
+}
+
+/* Estilos para el footer en modo oscuro */
+.dark-mode footer {
+    background-color:gray;
+    color: #fbfbfb;
+}
+
+.toggle-btn {
+    border: none;
+    /* Elimina el borde del botón */
+    background: none;
+    /* Elimina el fondo del botón */
+    padding: 0;
+    /* Elimina cualquier espacio interno de padding */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+
+#light-mode-btn,
+#dark-mode-btn {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* estilo de los iconos para el menu hamburguesa*/
+#open-menu,
+#close-menu {
+    width: 24px;
+    height: 24px;
+}
+
+.logo {
+    width: 90px;
+}
+
+/*Menu de Navegacion*/
+#menu-btn {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+img#close-menu {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+/*estilo para el menu mobile*/
+body.mobile-menu-active {
+    overflow: hidden;
+}
+
+body.mobile-menu-active img#close-menu {
+    display: block;
+}
+
+body.mobile-menu-active img#open-menu {
+    display: none;
+}
+
+body.mobile-menu-active header {
+    height: 40vh;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+}
+
+body.mobile-menu-active nav {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+
+body.mobile-menu-active ul#menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+}
+
+#menu {
+    display: flex;
+
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+/* Estilos para los enlaces dentro de los elementos de la lista */
+.menu-item a {
+
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li.menu-item a {
+    padding: 16px;
+    display: inline-block;
+}
+
+/* Estilos cuando el cursor esta sobre los enlaces del header */
+.menu-item a:hover {
+    background-color: rgb(44, 224, 185);
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(204, 14, 156, 0.829);
+}
+
+/* Boton para descargar o abrir CV */
+.boton {
+    background-color: #af599e;
+    font-size: 20px;
+    display: inline-block;
+    color: #fbfbfb;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    color: #0f0f0f;
+    /* Color del texto cuando se hace hover */
+    background-color: rgb(70, 211, 180);
+    /* Color de fondo cuando se hace hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(158, 5, 112, 0.952);
+}
+
+article.intro {
+    width: 100%;
+    text-align: center;
+}
+
+
+.intro {
+    background-color: #a0e3cd;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.imagn {
+    border-radius: 50%;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #af599e;
+    transition: opacity 1s ease-in-out;
+    /* Propiedad para la transicion de la imagen*/
+}
+
+.imagn-nueva {
+    /* Estilos específicos para la segunda imagen */
+    border: 2px solid rgb(49, 194, 174);
+    border-radius: 50%;
+    margin-top: 20px;
+    padding: 5px;
+    display: none;
+}
+
+
+article.hablemos {
+    background: rgba(175, 89, 158, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+article.contenido {
+    background-color: #a0e3cd;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+}
+
+#herramientas {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    text-align: center;
+    min-height: 50vh;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: rgba(175, 89, 158, 0.3);
+}
+
+#herramientas h3 {
+    margin-bottom: 20px;
+}
+
+.herramientas-imagenes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.herramientas-imagenes img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.herramientas-imagenes img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(158, 5, 112, 0.952);
+}
+
+.scroll-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+}
+
+section ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;
+
+}
+
+ul li a img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+#toggle-button {
+    cursor: pointer;
+    color: rgba(190, 10, 175, 0.705);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    background-color: #86dabe;
+    color: #fbfbfb;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Estilos para el botón "Ir arriba" */
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #86dabe;
+    color: #fbfbfb;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scroll-to-top img {
+    width: 100%;
+    height: auto;
+}
+
+#scroll-to-top:hover {
+    background-color: #5f5f5f;
+    transform: scale(1.1);
+}
+
+footer:hover {
+    color: #0f0f0f;
+}
+.iconos-footer li {
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    /*transicion suave para el cambio de tamaño*/
+}
+
+.iconos-footer li:hover {
+    transform: scale(1.2);
+    /* Escala 1.2 (20% más grande) al pasar el cursor sobre el icono */
+}
+
+/* Desktop*/
+
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    section#inicio {
+        flex-direction: row;
+    }
+
+    article.intro {
+        width: 100%;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .menu-item {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    #herramientas {
+        padding: 80px 0;
+    }
+
+    .herramientas-imagenes img {
+        max-width: 200px;
+    }
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/

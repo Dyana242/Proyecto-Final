@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana Amaya</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Para que se visualice un icono en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+    <header class="header-image">
+
+        <a href="#inicio" aria-label="Ir a la seccion inicio">
+            <img src="img/logo-1.png" alt="mi logo" class="logo">
+        </a>
+        <button id="toggle-mode-btn" class="toggle-btn" title="Cambiar Modo">
+            <img id="mode-img" src="img/toggle-on.png" alt="Modo Claro">
+        </button>
+        <button id="menu-btn">
+            <img src="img/open-menu.png" alt="abrir menu" id="open-menu">
+            <img src="img/close-menu.png" alt="cerrar menu" id="close-menu">
+        </button>
+        <nav>
+            <ul id="menu">
+                <li class="menu-item"> <a href="#inicio">Inicio</a>
+                </li>
+                <li class="menu-item"> <a href="#contacto">Contacto</a>
+                </li>
+                <li class="menu-item"> <a href="#sobre-mi">Sobre Mi</a></li>
+                <li class="menu-item"> <a href="#herramientas">Herramientas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="scroll-section" id="inicio">
+            <figure class="imagenes">
+                <img src="img/mi-foto.png" alt="foto perfil" class="imagn" id="imagenPerfil">
+                <img src="img/business-woman.jpeg" alt="otra imagen" class="imagn-nueva" id="otraImagen"
+                    style="display: none;">
+            </figure>
+            <article class="intro">
+                <h1>
+                    Saludos👋Soy Diana
+                </h1>
+                <p>
+                    Me dedico a realizar web testing para la plataforma RainforestQA, actualmente estoy estudiando
+                    Desarrollo Web en la Academia Eidos Global.
+                    Como web tester tengo 8 años de experiencia, mi principal funcion es realizar pruebas manuales para
+                    dicha plataforma
+                    a través de un maquina virtual que simula los diferentes navegadores como lo son Google
+                    Chrome, Firefox, Microsoft Edge, Safari, Brave, etc; asi como tambien, realizar pruebas a
+                    aplicaciones moviles para Android e iOS.
+                </p>
+
+                <a href="CV/Mi-CV.pdf" aria-label="DescargarCV" class="boton" target="_blank">Descarga mi CV </a>
+            </article>
+
+        </section>
+
+        <section class="scroll-section" id="contacto">
+            <article class="hablemos">
+                <h2>
+                    Hablemos!👩🏽‍💻
+                </h2>
+                <p>
+                <p>
+                    Como mencione antes, soy estudiante de Desarrollo Web en la prestigiosa Academia Eidos Global.
+                    Durante mi paso por esta academia, He aprendido a crear estructuras HTML y hojas de estilo CSS asi
+                    como tambien a utilizar JavaScript para dar vida a diseños atractivos y funcionales,
+                    mi constante deseo de aprender me han permitido abordar
+                    proyectos desafiantes y enriquecedores. Me entusiasmada la idea de encontrar una oportunidad
+                    laboral en este apasionante campo y seguir creciendo como profesional en la industria del Desarrollo
+                    Web.
+                </p>
+                </p>
+            </article>
+        </section>
+        <section class="scroll-section" id="sobre-mi">
+            <article class="contenido">
+                <h3>
+                    Mas Sobre Mi 🙂
+                </h3>
+                <p>En mis momentos de ocio, disfruto participar en diversas actividades que me apasionan. Una de mis
+                    preferidas es el ejercicio, especialmente el Tabata, ya que me permite mantenerme en forma y a la
+                    vez saludable, soy amante de la lectura, especialmente cuando se trata de libros que abordan el
+                    crecimiento personal y reflexiones sobre la vida, ya que estas obras exploran la esencia humana y
+                    promueven el crecimiento personal. </p>
+                <p>
+                    Pero los mas importante para mi es el tiempo que comparto con mis amigos y familiares, tomar un café
+                    en compañía de mis seres queridos es una de las mejores formas de disfrutar de la vida y crear
+                    recuerdos memorables.
+                </p>
+            </article>
+        </section>
+        <section class="scroll-section" id="herramientas">
+            <h3>
+                Herramientas 🛠️
+            </h3>
+            <div class="herramientas-imagenes">
+                <img src="img/html.png" alt="HTML">
+                <img src="img/css.png" alt="CSS">
+                <img src="img/js.png" alt="JavaScript">
+                <img src="img/vsc.png" alt="Visual Studio Code">
+                <img src="img/canva.png" alt="Canva">
+            </div>
+        </section>
+        <section>
+            <ul class="iconos-footer">
+                <li> <a href="mailto:dyanafal242@gmail.com" target="_blank" aria-label="enviar correo"> <img
+                            src="img/email.png" alt="mail"> </a> </li>
+                <li> <a href="https://github.com/Dyana242" target="_blank" aria-label="github"><img src="img/github2.png"
+                            alt="github"> </a> </li>
+                <li> <a href="https://www.linkedin.com/in/diana-amaya-a6915280/" target="_blank" aria-label="linkedin"> <img
+                            src="img/linkedin2.png" alt="linkedin"> </a> </li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <small class="footer">
+            Sitio Web Desarrollado por Diana Amaya ©️®️
+            <button id="scroll-to-top" title="Ir arriba">
+                <img src="img/arrow-up.png" alt="Flecha hacia arriba">
+            </button>
+        </small>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
